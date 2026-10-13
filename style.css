@@ -297,3 +297,12 @@ h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: 
 .gallery-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 960px) { .gallery-3 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) { .gallery-3 { grid-template-columns: 1fr; } }
+
+/* Language switch */
+.lang-btn { width: auto; padding: 0 10px; gap: 4px; display: flex; align-items: center; font: inherit; font-size: .8rem; font-weight: 700; }
+.lang-opt { color: var(--muted); }
+.lang-opt.active { color: var(--primary-2); }
+.lang-sep { color: var(--border); }
+.contact-links { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 620px; }
+.brand { white-space: nowrap; }
+@media (max-width: 380px) { .brand-name { display: none; } }

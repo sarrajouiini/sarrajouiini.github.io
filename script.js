@@ -13,6 +13,24 @@ themeBtn.addEventListener('click', () => {
   try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
 });
 
+// ---------- Langue : anglais par défaut, français en option ----------
+const i18nEls = [...document.querySelectorAll('[data-i18n]')];
+i18nEls.forEach(el => { el.dataset.en = el.innerHTML; });
+const langBtn = document.getElementById('langToggle');
+const setLang = lang => {
+  i18nEls.forEach(el => {
+    const fr = I18N_FR[el.dataset.i18n];
+    el.innerHTML = lang === 'fr' && fr !== undefined ? fr : el.dataset.en;
+  });
+  root.lang = lang;
+  langBtn.querySelectorAll('.lang-opt').forEach(o => o.classList.toggle('active', o.dataset.lang === lang));
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+};
+let initialLang = new URLSearchParams(location.search).get('lang');
+if (!initialLang) { try { initialLang = localStorage.getItem('lang'); } catch (e) {} }
+setLang(initialLang === 'fr' ? 'fr' : 'en');
+langBtn.addEventListener('click', () => setLang(root.lang === 'fr' ? 'en' : 'fr'));
+
 // ---------- Menu mobile ----------
 const navLinks = document.getElementById('navLinks');
 document.getElementById('menuBtn').addEventListener('click', () => navLinks.classList.toggle('open'));
