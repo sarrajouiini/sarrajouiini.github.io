@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarra Jouini · Data Analyst & BI</title>
+  <meta name="description" content="Portfolio de Sarra Jouini — Data Analyst & BI Engineer (Power BI, SQL, Talend), passionnée par la Data Science et l'IA (Machine Learning, XAI, RAG).">
+  <meta property="og:title" content="Sarra Jouini · Data Analyst & BI">
+  <meta property="og:description" content="Dashboards Power BI, data warehousing, Machine Learning et IA générative appliqués au risque de crédit et à la décarbonation.">
+  <meta property="og:image" content="assets/img/credit/vue-globale.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231e3a8a'/><text x='16' y='22' font-size='15' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>SJ</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand"><span class="brand-mark">SJ</span> Sarra Jouini</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#experience">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow"><span class="dot"></span> Disponible pour de nouvelles opportunités</span>
+      <h1>Je transforme les données en <span class="grad">décisions</span>.</h1>
+      <p class="lead">
+        <strong>Data Analyst & BI Engineer</strong> — ingénieure en informatique spécialisée en Business Intelligence.
+        Je conçois des entrepôts de données, des pipelines ETL (SSIS, Talend), des cubes SSAS et des dashboards Power BI, et je pousse l'analyse
+        plus loin avec le <strong>Machine Learning</strong>, l'<strong>IA explicable</strong> et l'<strong>IA générative (RAG)</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="assets/cv/Jouini_Sarra_CV_Data_Analyst.pdf" class="btn btn-ghost" download>CV Data Analyst ↓</a>
+        <a href="assets/cv/Jouini_Sarra_CV_Data_Scientist.pdf" class="btn btn-ghost" download>CV Data Scientist ↓</a>
+      </div>
+      <div class="hero-meta">
+        <span>📍 Tunis, Tunisie</span>
+        <span>🌍 Ouverte à la mobilité internationale</span>
+        <span>🗣️ Français & Anglais professionnels · Arabe natif</span>
+      </div>
+    </div>
+
+    <div class="hero-card reveal">
+      <div class="kpi-board">
+        <div class="kpi-head">
+          <span>portfolio.pbix</span>
+          <span class="live">● live</span>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi"><span class="kpi-label">Projets BI</span><span class="kpi-value" data-count="5">0</span></div>
+          <div class="kpi"><span class="kpi-label">Dashboards conçus</span><span class="kpi-value" data-count="12" data-suffix="+">0</span></div>
+          <div class="kpi"><span class="kpi-label">Ans de consulting</span><span class="kpi-value" data-count="2">0</span></div>
+          <div class="kpi"><span class="kpi-label">Clients analysés</span><span class="kpi-value" data-count="203" data-suffix="K">0</span></div>
+        </div>
+        <div class="spark">
+          <svg viewBox="0 0 300 70" preserveAspectRatio="none">
+            <path class="spark-area" d="M0,55 C30,50 45,30 75,35 C105,40 120,15 150,20 C180,25 200,45 225,30 C250,15 270,10 300,8 L300,70 L0,70Z"/>
+            <path class="spark-line" d="M0,55 C30,50 45,30 75,35 C105,40 120,15 150,20 C180,25 200,45 225,30 C250,15 270,10 300,8"/>
+          </svg>
+        </div>
+        <div class="stack-chips">
+          <span>Power BI</span><span>SSIS</span><span>SSAS</span><span>SQL Server</span><span>Talend</span><span>Python</span><span>DAX</span><span>SHAP</span><span>RAG</span><span>Spring Boot</span><span>Angular</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="section-tag">01 · À propos</span>
+      <h2>Entre la BI et l'IA</h2>
+    </div>
+    <div class="about-text reveal">
+      <p>
+        Je suis <strong>Sarra Jouini</strong>, ingénieure en informatique spécialisée en <strong>Business Intelligence</strong>,
+        avec deux ans d'expérience en consulting dans le secteur des <strong>services financiers</strong> chez Teamwill Consulting.
+      </p>
+      <p>
+        Mon cœur de métier : partir d'un besoin métier, construire une donnée fiable (modélisation, data warehouse, ETL Talend / SQL Server)
+        et la rendre lisible pour les décideurs grâce à des <strong>dashboards Power BI</strong> clairs et actionnables.
+      </p>
+      <p>
+        Ce qui me passionne en ce moment : aller au-delà du descriptif. Prédire le risque de défaut avec le <strong>Machine Learning</strong>,
+        expliquer chaque décision avec <strong>SHAP & LIME</strong>, et permettre aux utilisateurs d'interroger leurs données en langage naturel
+        grâce à un <strong>assistant RAG basé sur un LLM</strong>.
+      </p>
+      <div class="about-pillars">
+        <div class="pillar"><span class="pillar-ico">📊</span><div><strong>Data Analysis & BI</strong><small>Power BI, DAX, KPI, storytelling</small></div></div>
+        <div class="pillar"><span class="pillar-ico">🗄️</span><div><strong>Data Engineering</strong><small>MSBI (SSIS, SSAS), DWH, ETL Talend</small></div></div>
+        <div class="pillar"><span class="pillar-ico">🤖</span><div><strong>Data Science & IA</strong><small>ML, XAI, LLM, RAG</small></div></div>
+        <div class="pillar"><span class="pillar-ico">🤝</span><div><strong>Dev & Consulting</strong><small>Spring Boot, Angular, React, FastAPI · specs, UAT</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">02 · Projets</span>
+      <h2>Projets sélectionnés</h2>
+      <p class="muted">Cliquez sur une capture pour l'agrandir. Les démos vidéo sont disponibles pour les projets phares.</p>
+    </div>
+
+    <div class="filters reveal" role="tablist">
+      <button class="filter active" data-filter="all">Tous</button>
+      <button class="filter" data-filter="bi">Business Intelligence</button>
+      <button class="filter" data-filter="ml">Data Science & IA</button>
+      <button class="filter" data-filter="dev">Développement</button>
+    </div>
+
+    <!-- ---------- PROJECT 1 : NEXTCREDIT ---------- -->
+    <article class="project featured reveal" data-cat="bi ml dev">
+      <div class="project-header">
+        <div>
+          <span class="badge badge-blue">Projet phare · PFE · Teamwill Consulting · Nov. 2025 – Août 2026</span>
+          <h3>NextCredit — Plateforme BI & IA pour le risque de crédit</h3>
+          <p class="project-sub">Business Intelligence · Machine Learning · IA explicable · Assistant RAG</p>
+        </div>
+        <div class="project-links">
+          <a href="#video-credit" class="btn btn-sm btn-primary">▶ Démo vidéo</a>
+        </div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-desc">
+          <h4>Contexte</h4>
+          <p>
+            Une institution financière a besoin de suivre son portefeuille de crédit, d'anticiper le défaut de ses clients et
+            de justifier chaque décision d'octroi. Les données (demandes de crédit, comportement de paiement, profils clients)
+            étaient dispersées et peu exploitables.
+          </p>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul class="checks">
+            <li>Conception du <strong>data warehouse</strong> (modèle en étoile : <code>Fait_Demande</code>, <code>Fait_Comportement</code>, dimensions Client, Date, Produit, Contrat, Canal…).</li>
+            <li>Développement des <strong>pipelines ETL avec Talend & SQL Server</strong> pour intégrer, nettoyer et historiser les données.</li>
+            <li><strong>4 dashboards Power BI</strong> : Vue globale, Performance portefeuille, Profil clients, Retard & défaut.</li>
+            <li>Calcul des indicateurs de risque réglementaires : <strong>PD, LGD, EAD, Expected Loss, Unexpected Loss, ratio NPL</strong>, taux de recouvrement.</li>
+            <li>Modèles de <strong>Machine Learning</strong> de prédiction du défaut, rendus transparents avec <strong>SHAP & LIME</strong>.</li>
+            <li><strong>Assistant RAG</strong> propulsé par un LLM pour interroger les indicateurs et comprendre les explications des décisions en langage naturel.</li>
+            <li>Intégration dans une <strong>application web</strong> (API Flask + front Angular).</li>
+          </ul>
+        </div>
+        <aside class="project-side">
+          <div class="metrics">
+            <div class="metric"><span>203K</span><small>clients analysés</small></div>
+            <div class="metric"><span>88,7 Md</span><small>montant de crédit suivi</small></div>
+            <div class="metric"><span>8,06 %</span><small>probabilité de défaut</small></div>
+            <div class="metric"><span>1,12 %</span><small>ratio NPL (seuil 3 %)</small></div>
+          </div>
+          <h4>Stack</h4>
+          <div class="tags">
+            <span>Power BI</span><span>DAX</span><span>SQL Server</span><span>Talend</span><span>Python</span><span>Scikit-learn</span><span>SHAP</span><span>LIME</span><span>LLM</span><span>RAG</span><span>Flask</span><span>Angular</span>
+          </div>
+          <h4>Impact</h4>
+          <p class="small">Une vision unique et fiable du risque, des décisions de crédit expliquées et auditables, et un accès aux données simplifié pour les équipes métier.</p>
+        </aside>
+      </div>
+
+      <div class="gallery">
+        <figure data-full="assets/img/credit/vue-globale.png"><img src="assets/img/credit/vue-globale.png" alt="NextCredit – Vue globale" loading="lazy"><figcaption>Vue globale — PD, taux d'approbation, montants, LGD vs recouvrement</figcaption></figure>
+        <figure data-full="assets/img/credit/performance-portefeuille.png"><img src="assets/img/credit/performance-portefeuille.png" alt="NextCredit – Performance portefeuille" loading="lazy"><figcaption>Performance portefeuille — exposition, NPL, Unexpected Loss, funnel</figcaption></figure>
+        <figure data-full="assets/img/credit/profil-clients.png"><img src="assets/img/credit/profil-clients.png" alt="NextCredit – Profil clients" loading="lazy"><figcaption>Profil clients — défaut par âge et genre, revenus, éducation</figcaption></figure>
+        <figure data-full="assets/img/credit/retard-defaut.png"><img src="assets/img/credit/retard-defaut.png" alt="NextCredit – Retard et défaut" loading="lazy"><figcaption>Retard & défaut — EAD, NPL réglementaire, tranches de retard</figcaption></figure>
+      </div>
+
+      <div class="video-wrap" id="video-credit">
+        <h4>🎬 Démo vidéo — NextCredit</h4>
+        <!-- Option 1 : fichier vidéo local (assets/video/creditrisk.mp4, < 100 Mo pour GitHub)
+             Option 2 : YouTube (non répertorié) → remplacez la balise <video> par :
+             <iframe src="https://www.youtube-nocookie.com/embed/VOTRE_ID" title="Démo NextCredit" allowfullscreen></iframe> -->
+        <video controls preload="metadata" poster="assets/img/credit/vue-globale.png">
+          <source src="assets/video/creditrisk.mp4" type="video/mp4">
+          Votre navigateur ne lit pas la vidéo.
+        </video>
+      </div>
+    </article>
+
+    <!-- ---------- PROJECT 2 : CO2 ---------- -->
+    <article class="project featured reveal" data-cat="bi ml">
+      <div class="project-header">
+        <div>
+          <span class="badge badge-green">Projet académique · ESPRIT</span>
+          <h3>Réduction des émissions de CO₂ dans l'industrie agroalimentaire</h3>
+          <p class="project-sub">Business Intelligence · Développement durable · Prédiction</p>
+        </div>
+        <div class="project-links">
+          <a href="#video-co2" class="btn btn-sm btn-green">▶ Démo vidéo</a>
+        </div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-desc">
+          <h4>Contexte</h4>
+          <p>
+            Une entreprise agroalimentaire multi-sites (Tunis, Sousse, Sfax, Gabès) doit mesurer son empreinte carbone
+            (Scopes 1, 2 et 3), respecter son quota d'émissions et identifier les leviers de réduction — sans que les décideurs
+            soient des experts techniques.
+          </p>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul class="checks">
+            <li>Collecte et traitement des données d'émissions avec <strong>Python & Talend</strong>.</li>
+            <li><strong>6 pages Power BI</strong> : Accueil, Matériaux, Équipements, Fournisseurs, Concurrents, Quota & prédiction.</li>
+            <li>Analyse par <strong>Scope 1 / 2 / 3</strong>, par site, par équipement, par matière première et par fournisseur (certifications ISO 14001, Bio).</li>
+            <li><strong>Benchmark concurrentiel</strong> (Danone, Lactalis, Nestlé) : impact CO₂, eau, mix énergétique, score durable.</li>
+            <li>Modèles de <strong>prédiction</strong> : risque de défaillance des équipements et impact environnemental par catégorie.</li>
+            <li><strong>Assistant de recommandation</strong> qui transforme les résultats d'analyse en actions concrètes (réduction des déchets, efficacité énergétique).</li>
+            <li>Suivi de l'impact des actions mises en place via le même reporting, aligné sur les <strong>ODD 7, 9, 12 et 13</strong>.</li>
+          </ul>
+        </div>
+        <aside class="project-side">
+          <div class="metrics">
+            <div class="metric green"><span>11 697</span><small>tCO₂ émises (2024)</small></div>
+            <div class="metric green"><span>6 769</span><small>tCO₂ en Scope 3</small></div>
+            <div class="metric green"><span>50,9 %</span><small>du quota consommé</small></div>
+            <div class="metric green"><span>4</span><small>sites suivis</small></div>
+          </div>
+          <h4>Stack</h4>
+          <div class="tags">
+            <span>Power BI</span><span>DAX</span><span>Python</span><span>Talend</span><span>Machine Learning</span><span>Data Storytelling</span>
+          </div>
+          <h4>Impact</h4>
+          <p class="small">Des données carbone rendues claires pour des non-techniciens, et un outil d'aide à la décision pour prioriser les actions de réduction.</p>
+        </aside>
+      </div>
+
+      <div class="gallery gallery-3">
+        <figure data-full="assets/img/co2/accueil.png"><img src="assets/img/co2/accueil.png" alt="CO2 – Accueil" loading="lazy"><figcaption>Accueil — émissions totales, Scopes 1/2/3, carte des sites</figcaption></figure>
+        <figure data-full="assets/img/co2/materiaux.png"><img src="assets/img/co2/materiaux.png" alt="CO2 – Matériaux" loading="lazy"><figcaption>Matériaux — intensité carbone et eau par ingrédient</figcaption></figure>
+        <figure data-full="assets/img/co2/equipements.png"><img src="assets/img/co2/equipements.png" alt="CO2 – Équipements" loading="lazy"><figcaption>Équipements — émissions et efficacité par machine</figcaption></figure>
+        <figure data-full="assets/img/co2/fournisseurs.png"><img src="assets/img/co2/fournisseurs.png" alt="CO2 – Fournisseurs" loading="lazy"><figcaption>Fournisseurs — transport et score de durabilité</figcaption></figure>
+        <figure data-full="assets/img/co2/concurrents.png"><img src="assets/img/co2/concurrents.png" alt="CO2 – Concurrents" loading="lazy"><figcaption>Concurrents — benchmark Danone, Lactalis, Nestlé</figcaption></figure>
+        <figure data-full="assets/img/co2/quota-prediction.png"><img src="assets/img/co2/quota-prediction.png" alt="CO2 – Quota et prédiction" loading="lazy"><figcaption>Quota & prédiction — risque de défaillance, impact prédit</figcaption></figure>
+      </div>
+
+      <div class="video-wrap" id="video-co2">
+        <h4>🎬 Démo vidéo — Dashboard CO₂</h4>
+        <video controls preload="metadata" poster="assets/img/co2/accueil.png">
+          <source src="assets/video/co2.mp4" type="video/mp4">
+          Votre navigateur ne lit pas la vidéo.
+        </video>
+      </div>
+    </article>
+
+    <!-- ---------- PROJECT 3 : AIRBNB ---------- -->
+    <article class="project reveal" data-cat="bi">
+      <div class="project-header">
+        <div>
+          <span class="badge badge-coral">Projet d'analyse</span>
+          <h3>Airbnb Europe — Analyse des réservations et du chiffre d'affaires</h3>
+          <p class="project-sub">ETL SSIS · Data Warehouse SQL Server · Cube SSAS · Power BI</p>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">
+          <p>
+            Analyse des performances Airbnb dans les grandes villes européennes (Londres, Paris, Rome, Amsterdam, Vienne, Athènes,
+            Barcelone, Berlin…) : où se concentre le chiffre d'affaires, quels types de logements performent, comment évolue
+            l'activité de 2020 à 2023 et quelle est la satisfaction par annonce.
+          </p>
+          <ul class="checks">
+            <li>Chaîne BI complète sur la <strong>stack Microsoft SQL Server</strong> : de la donnée brute jusqu'au dashboard.</li>
+            <li><strong>ETL avec SSIS</strong> : extraction, nettoyage et chargement des données (annonces, réservations, hôtes, quartiers) dans l'entrepôt.</li>
+            <li>Conception du <strong>data warehouse</strong> sous SQL Server, administré avec <strong>SSMS</strong> (modèle en étoile : faits réservations, dimensions logement, ville, quartier, date, type de jour).</li>
+            <li>Construction d'un <strong>cube SSAS</strong> pour l'analyse multidimensionnelle, connecté à Power BI.</li>
+            <li>Mesures DAX (CA, nombre de réservations, ratio de satisfaction).</li>
+            <li>Dashboard interactif à 2 pages avec filtres <strong>mois / type de logement / ville</strong> et navigation par boutons.</li>
+            <li>Carte géographique, treemap du CA par ville, matrice de satisfaction par quartier.</li>
+            <li>Insights : <strong>Londres et Paris = 61 % du CA</strong>, chute en 2022 puis forte reprise en 2023, plus de réservations le week-end.</li>
+          </ul>
+        </div>
+        <aside class="project-side">
+          <div class="metrics">
+            <div class="metric coral"><span>9,2 M</span><small>chiffre d'affaires</small></div>
+            <div class="metric coral"><span>193K</span><small>hôtes</small></div>
+            <div class="metric coral"><span>28K</span><small>réservations</small></div>
+            <div class="metric coral"><span>10+</span><small>villes</small></div>
+          </div>
+          <h4>Stack</h4>
+          <div class="tags"><span>SQL Server</span><span>SSIS</span><span>SSAS</span><span>SSMS</span><span>Data Warehouse</span><span>Power BI</span><span>DAX</span><span>Cartographie</span></div>
+        </aside>
+      </div>
+      <div class="gallery gallery-2">
+        <figure data-full="assets/img/airbnb/vue-globale.jpg"><img src="assets/img/airbnb/vue-globale.jpg" alt="Airbnb – Vue globale" loading="lazy"><figcaption>Vue globale — KPI, CA par ville et par année</figcaption></figure>
+        <figure data-full="assets/img/airbnb/carte-quartiers.jpg"><img src="assets/img/airbnb/carte-quartiers.jpg" alt="Airbnb – Carte et quartiers" loading="lazy"><figcaption>Carte & quartiers — satisfaction et réservations</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- ---------- SMALLER PROJECTS ---------- -->
+    <div class="mini-grid">
+      <article class="mini reveal" data-cat="dev bi">
+        <span class="mini-ico">⚡</span>
+        <h3>Application de gestion de projets</h3>
+        <p class="muted small">Timsoft · Power Platform</p>
+        <p>Application Power Apps de gestion de projets, suivi des tâches, délais et KPI intégré avec Power BI, workflows automatisés avec Power Automate.</p>
+        <div class="tags"><span>Power Apps</span><span>Power Automate</span><span>Power BI</span></div>
+      </article>
+      <article class="mini reveal" data-cat="ml dev">
+        <span class="mini-ico">👁️</span>
+        <h3>Reconnaissance d'objets industriels</h3>
+        <p class="muted small">All Circuit · Computer Vision</p>
+        <p>Application web de détection d'objets industriels avec caméra Raspberry Pi, algorithme de reconnaissance pour le test d'écrans LCD, validé en conditions réelles.</p>
+        <div class="tags"><span>Python</span><span>Computer Vision</span><span>Raspberry Pi</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">03 · Compétences</span>
+      <h2>Ma boîte à outils</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3>📊 BI & Visualisation</h3>
+        <div class="tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Tableau</span><span>Looker</span><span>Excel</span><span>Power Apps</span><span>Power Automate</span><span>Data Storytelling</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>🗄️ Data Engineering</h3>
+        <div class="tags"><span>Microsoft BI (MSBI)</span><span>SSIS</span><span>SSAS</span><span>SQL Server</span><span>SQL / PL/SQL</span><span>Talend (ETL)</span><span>Data Warehousing</span><span>Modélisation (étoile / flocon)</span><span>Cubes OLAP</span><span>AWS (académique)</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>🤖 Data Science & IA</h3>
+        <div class="tags"><span>Python</span><span>R</span><span>Machine Learning</span><span>Deep Learning</span><span>SHAP / LIME</span><span>LLM</span><span>RAG</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>💻 Développement logiciel</h3>
+        <div class="tags"><span>Spring Boot</span><span>Java</span><span>Angular</span><span>React</span><span>TypeScript</span><span>Flask</span><span>FastAPI</span><span>API REST</span><span>Git</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>🤝 Fonctionnel & Outils</h3>
+        <div class="tags"><span>Recueil du besoin</span><span>User Stories</span><span>Spécifications fonctionnelles</span><span>Recette / UAT</span><span>Agile Scrum</span><span>Jira</span><span>SAP</span><span>ERP & CRM</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>🌍 Langues</h3>
+        <ul class="langs">
+          <li><span>Arabe</span><em>Langue maternelle</em><i style="--w:100%"></i></li>
+          <li><span>Français</span><em>Professionnel</em><i style="--w:90%"></i></li>
+          <li><span>Anglais</span><em>Professionnel</em><i style="--w:90%"></i></li>
+          <li><span>Espagnol</span><em>Notions de base</em><i style="--w:30%"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">04 · Parcours</span>
+      <h2>Expérience & formation</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <span class="tl-date">Sept. 2025 — aujourd'hui</span>
+        <h3>Consultante Technico-Fonctionnelle · BI & Data</h3>
+        <p class="tl-org">Teamwill Consulting · Client : Crédit Agricole Leasing & Factoring (Projet plateforme CBM)</p>
+        <ul>
+          <li>Recueil et analyse des besoins métier sur la refonte des applications critiques du middle-office (DE, E-lease, BT Référentiel Tiers, SAFIRE, SAS EKIP).</li>
+          <li>Rédaction de User Stories et spécifications fonctionnelles pour les équipes techniques.</li>
+          <li>Participation aux sessions de recette utilisateur (UAT) avant mise en production.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-date">Nov. 2025 — Août 2026</span>
+        <h3>BI & Data Scientist · Risque de crédit (PFE)</h3>
+        <p class="tl-org">Teamwill Consulting</p>
+        <ul>
+          <li>Plateforme BI de risque de crédit : data warehouse, ETL Talend / SQL Server, dashboards Power BI.</li>
+          <li>Modèles ML de prédiction du défaut, explicabilité SHAP / LIME, assistant RAG à base de LLM.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-date">Juin 2024 — Août 2024</span>
+        <h3>Power Platform Developer</h3>
+        <p class="tl-org">Timsoft</p>
+        <ul><li>Application de gestion de projets (Power Apps, Power BI, Power Automate).</li></ul>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-date">Projet académique</span>
+        <h3>BI / Data Analyst · Réduction CO₂</h3>
+        <p class="tl-org">ESPRIT</p>
+        <ul><li>Dashboards Power BI d'empreinte carbone, prédictions et recommandations d'actions durables.</li></ul>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-date">Févr. 2023 — Juin 2023</span>
+        <h3>Computer Vision Developer</h3>
+        <p class="tl-org">All Circuit</p>
+        <ul><li>Solution de reconnaissance d'objets industriels avec Raspberry Pi.</li></ul>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu reveal">
+        <span class="tl-date">2023 — 2026</span>
+        <h3>Diplôme d'ingénieur en informatique — spécialité Business Intelligence</h3>
+        <p class="muted">École Supérieure Privée d'Ingénierie et de Technologies (ESPRIT)</p>
+      </div>
+      <div class="edu reveal">
+        <span class="tl-date">2020 — 2023</span>
+        <h3>Licence en systèmes embarqués micro-informatiques</h3>
+        <p class="muted">Institut Supérieur des Arts Multimédia de la Manouba</p>
+      </div>
+      <div class="edu reveal">
+        <span class="tl-date">Certifications</span>
+        <ul class="cert-list">
+          <li><strong>Fundamentals of Deep Learning</strong> — NVIDIA · 2025</li>
+          <li><strong>Introduction to CRM with HubSpot</strong> — Coursera · 2025</li>
+          <li><strong>CCNA</strong> — Cisco · 2024</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="container contact reveal">
+    <span class="section-tag">05 · Contact</span>
+    <h2>Travaillons ensemble</h2>
+    <p class="lead center">Un poste de Data Analyst, BI Engineer ou Data Scientist junior, en Tunisie ou à l'international ? Un projet data ? Écrivez-moi.</p>
+    <div class="contact-links">
+      <a class="contact-card" href="mailto:Jouini.sarra@esprit.tn">
+        <span>✉️</span><div><strong>Email</strong><small>Jouini.sarra@esprit.tn</small></div>
+      </a>
+      <!-- Remplacez les liens ci-dessous par vos vrais profils -->
+      <a class="contact-card" href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener">
+        <span>💼</span><div><strong>LinkedIn</strong><small>Voir mon profil</small></div>
+      </a>
+      <a class="contact-card" href="https://github.com/VOTRE-PSEUDO" target="_blank" rel="noopener">
+        <span>💻</span><div><strong>GitHub</strong><small>Voir mon code</small></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Sarra Jouini · Data Analyst & BI — Fait avec soin, hébergé gratuitement.</div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Fermer">×</button>
+  <button class="lb-nav lb-prev" aria-label="Précédent">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-nav lb-next" aria-label="Suivant">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
