@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulateur interactif : feux fixes contre un agent d'apprentissage par renforcement (GNN + DQN).">
+  <title>Simulateur de feux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div>
+        <h1>Simulateur de feux intelligents</h1>
+        <p>Construisez votre ville, puis comparez les feux fixes et l'agent GNN + DQN sur le même trafic.</p>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="https://github.com/sarrajouiini/traffic-rl-gnn" target="_blank" rel="noopener">Code source</a>
+      <a href="https://sarrajouiini.github.io/">Portfolio</a>
+      <div id="model-status" class="status"></div>
+    </div>
+  </header>
+
+  <!-- =================================================== ÉCRAN 1 : CONFIGURATION -->
+  <main id="setup" class="screen">
+    <section class="card network-card">
+      <div class="card-head">
+        <span class="step">1</span>
+        <h2>Le réseau routier</h2>
+      </div>
+      <label class="field">
+        <span>Nombre d'intersections <b id="n-label">6</b> <em id="grid-label">grille 2 × 3</em></span>
+        <input id="n-nodes" type="range" min="2" max="12" value="6">
+      </label>
+      <canvas id="preview" aria-label="Aperçu du réseau routier"></canvas>
+      <p class="hint">Cliquez sur une intersection pour la sélectionner. Les flèches montrent les entrées du réseau.</p>
+    </section>
+
+    <section class="card traffic-card">
+      <div class="card-head">
+        <span class="step">2</span>
+        <h2>Le trafic</h2>
+      </div>
+      <div class="presets" role="group" aria-label="Scénarios prédéfinis">
+        <button data-preset="calm">Calme</button>
+        <button data-preset="normal">Normal</button>
+        <button data-preset="rush">Heure de pointe</button>
+        <button data-preset="ns">Axe Nord-Sud chargé</button>
+        <button data-preset="jam">Embouteillage</button>
+        <button data-preset="random">Aléatoire</button>
+      </div>
+      <div id="node-list" class="node-list"></div>
+    </section>
+
+    <section class="card settings-card">
+      <div class="card-head">
+        <span class="step">3</span>
+        <h2>La simulation</h2>
+      </div>
+      <div class="settings">
+        <label class="field">
+          <span>Durée simulée <b id="dur-label">15 min</b></span>
+          <input id="duration" type="range" min="5" max="60" step="5" value="15">
+        </label>
+        <label class="field">
+          <span>Feux fixes : vert par phase <b id="green-label">30 s</b></span>
+          <input id="green" type="range" min="10" max="90" step="5" value="30">
+        </label>
+        <label class="check">
+          <input id="variable" type="checkbox" checked>
+          <span>Demande variable (la pointe passe du Nord-Sud à l'Est-Ouest)</span>
+        </label>
+        <label class="field seed">
+          <span>Graine aléatoire</span>
+          <input id="seed" type="number" value="2026" min="0">
+        </label>
+      </div>
+      <button id="run" class="primary">Lancer la simulation</button>
+      <p id="setup-error" class="error" role="alert"></p>
+    </section>
+  </main>
+
+  <!-- =================================================== ÉCRAN 2 : SIMULATION -->
+  <main id="sim" class="screen hidden">
+    <div class="sim-toolbar">
+      <button id="back" class="ghost">← Modifier le trafic</button>
+      <div id="scenario-summary" class="summary"></div>
+    </div>
+
+    <div class="arena">
+      <section class="panel before">
+        <div class="panel-head">
+          <span class="tag">AVANT</span>
+          <h2>Feux à durée fixe</h2>
+        </div>
+        <canvas id="cv-fixed" class="city"></canvas>
+        <div class="stats" id="stats-fixed"></div>
+      </section>
+      <section class="panel after">
+        <div class="panel-head">
+          <span class="tag">APRÈS</span>
+          <h2>Agent GNN + DQN</h2>
+        </div>
+        <canvas id="cv-agent" class="city"></canvas>
+        <div class="stats" id="stats-agent"></div>
+      </section>
+    </div>
+
+    <div class="controls card">
+      <button id="restart" class="icon" title="Recommencer" aria-label="Recommencer">⏮</button>
+      <button id="play" class="icon play" title="Lecture / pause" aria-label="Lecture">▶</button>
+      <div class="speeds" role="group" aria-label="Vitesse">
+        <button data-speed="1">×1</button>
+        <button data-speed="2" class="on">×2</button>
+        <button data-speed="4">×4</button>
+        <button data-speed="8">×8</button>
+      </div>
+      <input id="timeline" type="range" min="0" max="100" value="0" step="1" aria-label="Chronologie">
+      <span id="clock" class="clock">00:00 / 15:00</span>
+    </div>
+
+    <div class="bottom">
+      <section class="card chart-card">
+        <h3>Véhicules en attente dans tout le réseau</h3>
+        <canvas id="chart"></canvas>
+        <div class="legend"><span class="lg fixed">Feux fixes</span><span class="lg agent">Agent GNN + DQN</span></div>
+      </section>
+      <section class="card result-card" id="result"></section>
+    </div>
+  </main>
+
+  <div id="loading" class="loading hidden" role="status">
+    <div class="spinner"></div>
+    <p>Simulation du même trafic avec les deux méthodes…</p>
+  </div>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
